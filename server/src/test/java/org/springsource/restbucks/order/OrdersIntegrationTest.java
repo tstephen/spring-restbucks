@@ -21,6 +21,7 @@ import static org.springsource.restbucks.order.Order.Status.*;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springsource.restbucks.AbstractIntegrationTest;
 
 /**
@@ -35,7 +36,7 @@ class OrdersIntegrationTest extends AbstractIntegrationTest {
 	@Test
 	void findsAllOrders() {
 
-		Iterable<Order> orders = repository.findAll();
+		Iterable<Order> orders = repository.findAll(Sort.unsorted());
 		assertThat(orders).isNotEmpty();
 	}
 

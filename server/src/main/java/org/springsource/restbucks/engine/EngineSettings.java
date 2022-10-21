@@ -15,13 +15,12 @@
  */
 package org.springsource.restbucks.engine;
 
-import lombok.Value;
-
 import java.time.Duration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConstructorBinding;
 import org.springframework.boot.context.properties.bind.DefaultValue;
+
+import lombok.Value;
 
 /**
  * Configuration settings for {@link Engine}.
@@ -29,7 +28,6 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
  * @author Oliver Drotbohm
  */
 @Value
-@ConstructorBinding
 @ConfigurationProperties("restbucks.engine")
 class EngineSettings {
 

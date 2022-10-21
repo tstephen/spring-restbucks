@@ -26,10 +26,10 @@ import java.util.List;
 import java.util.UUID;
 
 import javax.money.MonetaryAmount;
-import javax.persistence.Column;
-import javax.persistence.OrderColumn;
-import javax.persistence.Table;
-import javax.persistence.Version;
+import jakarta.persistence.Column;
+import jakarta.persistence.OrderColumn;
+import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 
 import org.javamoney.moneta.Money;
 import org.jmolecules.ddd.types.AggregateRoot;

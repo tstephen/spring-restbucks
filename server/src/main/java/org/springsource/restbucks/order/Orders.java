@@ -18,6 +18,7 @@ package org.springsource.restbucks.order;
 import java.util.List;
 
 import org.jmolecules.spring.AssociationResolver;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -32,7 +33,8 @@ import org.springsource.restbucks.order.Order.Status;
  */
 @RepositoryRestResource(excerptProjection = OrderProjection.class)
 public interface Orders
-		extends AssociationResolver<Order, OrderIdentifier>, PagingAndSortingRepository<Order, OrderIdentifier> {
+		extends AssociationResolver<Order, OrderIdentifier>, PagingAndSortingRepository<Order, OrderIdentifier>,
+		CrudRepository<Order, OrderIdentifier> {
 
 	/**
 	 * Returns all {@link Order}s with the given {@link Status}.
